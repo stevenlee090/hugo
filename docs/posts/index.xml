@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo Ideas</title>
-    <link>https://stevenlee090.github.io/hugo/</link>
-    <description>Recent content on Hugo Ideas</description>
+    <title>Posts on Hugo Ideas</title>
+    <link>https://stevenlee090.github.io/hugo/posts/</link>
+    <description>Recent content in Posts on Hugo Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Jun 2019 19:00:33 +1000</lastBuildDate>
     
-	<atom:link href="https://stevenlee090.github.io/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://stevenlee090.github.io/hugo/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
