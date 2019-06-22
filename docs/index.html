@@ -22,6 +22,35 @@
     
     
     
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
   </head>
   <body class="list home">
     <header class="header">
@@ -44,10 +73,28 @@
 
 <article class="first-entry">
   <header class="entry-header">
+    <h2>Taiwan</h2>
+  </header>
+  <section class="entry-content">
+   <p>Here, I will attempt to outline some of the interesting places to visit in Taiwan, in particular within the capital city Taipei. Plus some other regions of interest, which are still quite accessible via the high speed rail system.
+Places to visit around Sanchong District Considering there are so many places to visit around the Sanchong District, I will briefly go over my personal favourites. Clicking on the links in each dot point should open them up in Google Maps....</p>
+  </section>
+  <footer class="entry-footer">
+    <time>2019.6.22</time>
+  </footer>
+  <a class="entry-link" href="https://stevenlee090.github.io/hugo/posts/taiwan/"></a>
+</article>
+
+<article class="post-entry">
+  <header class="entry-header">
     <h2>My First Post</h2>
   </header>
   <section class="entry-content">
-   <p>This is my very first post using Hugo!...</p>
+   <p>This is my very first post using Hugo!
+Emoji Support This is enable by going into the the config.toml file and adding the following line.
+enableEmoji = true  I ❤️ Hugo!
+LaTeX Equation through MathJax The official Hugo documentation goes over how you can setup MathJax with Hugo.
+However, this particular blog post from a fellow Hugo user is arguably clearer and easier to follow if you want to setup MathJax support for your own Hugo site....</p>
   </section>
   <footer class="entry-footer">
     <time>2019.6.22</time>

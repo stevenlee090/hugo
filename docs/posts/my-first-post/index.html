@@ -7,7 +7,11 @@
     
     <title>My First Post - Hugo Ideas</title>
     
-    <meta name="description" content="This is my very first post using Hugo!">
+    <meta name="description" content="This is my very first post using Hugo!
+Emoji Support This is enable by going into the the config.toml file and adding the following line.
+enableEmoji = true  I ❤️ Hugo!
+LaTeX Equation through MathJax The official Hugo documentation goes over how you can setup MathJax with Hugo.
+However, this particular blog post from a fellow Hugo user is arguably clearer and easier to follow if you want to setup MathJax support for your own Hugo site.">
     <meta name="author" content="">
     
     <link href="https://stevenlee090.github.io/hugo/css/github-gist.min.css" rel="stylesheet">
@@ -22,6 +26,35 @@
     
     
     
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
   </head>
   <body class="single">
     <header class="header">
@@ -41,7 +74,32 @@
     <h1 class="post-title">My First Post</h1>
     <div class="post-meta">2019.6.22</div>
   </header>
-  <div class="post-content"><p>This is my very first post using Hugo!</p>
+  <div class="post-content">
+
+<p>This is my very first post using Hugo!</p>
+
+<h2 id="emoji-support">Emoji Support</h2>
+
+<p>This is enable by going into the the <code>config.toml</code> file and adding the following line.</p>
+
+<pre><code>enableEmoji = true
+</code></pre>
+
+<p>I ❤️ Hugo!</p>
+
+<h2 id="latex-equation-through-mathjax">LaTeX Equation through MathJax</h2>
+
+<p>The official Hugo documentation goes over how you can <a href="https://gohugo.io/content-management/formats/#mathjax-with-hugo">setup MathJax with Hugo</a>.</p>
+
+<p>However, this <a href="https://divadnojnarg.github.io/blog/mathjax/">particular blog post</a> from a fellow Hugo user is arguably clearer and easier to follow if you want to setup MathJax support for your own Hugo site.</p>
+
+<h3 id="cauchy-schwarz-inequality">Cauchy-Schwarz Inequality</h3>
+
+<p>$$ \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) $$</p>
+
+<h3 id="probability-of-getting-k-heads-when-flipping-n-coins-is">Probability of getting \(k\) heads when flipping \(n\) coins is</h3>
+
+<p>$$ P(E) = {n \choose k} p^k (1-p)^{ n-k} $$</p>
 </div>
   <footer class="post-footer">
     

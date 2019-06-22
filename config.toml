@@ -3,3 +3,4 @@ languageCode = "en-us"
 title = "Hugo Ideas"
 theme = "hugo-paper"
 publishDir = "docs"
+enableEmoji = true
