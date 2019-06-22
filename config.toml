@@ -1,0 +1,5 @@
+baseURL = "https://stevenlee090.github.io/hugo"
+languageCode = "en-us"
+title = "Hugo Ideas"
+theme = "hugo-paper"
+publishDir = "docs"
