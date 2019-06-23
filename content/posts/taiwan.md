@@ -54,6 +54,9 @@ When planning to go to a particular point of interest, it is often sufficient to
 * [Guanghua Digital Plaza](https://goo.gl/maps/oAF5F21Lmb51ZhBv9)
     - Popular place to buy consumer electronics and other accessories.
     - Personally, I would be wary of the initial price though, certain shop owners are not very honest. So I usually compare between 2-3 vendors before deciding on my willingness to pay.
+* [Din Tai Fung Xinyi Restaurant](https://goo.gl/maps/Uns6suTt1bs4PdyN9)
+    - Popular mandarin restaurant with dishes such as xiao long bao 小籠包.
+    - Has multiple different branches throughout different city locations.
 
 
 ## Travelling to other cities
