@@ -27,3 +27,5 @@ $$ \left( \sum\_{k=1}^n a\_k b\_k \right)^2 \leq \left( \sum\_{k=1}^n a\_k^2 \ri
 ### Probability of getting \\(k\\) heads when flipping \\(n\\) coins is
 
 $$ P(E) = {n \choose k} p^k (1-p)^{ n-k} $$
+
+Making a small change on Github desktop!
