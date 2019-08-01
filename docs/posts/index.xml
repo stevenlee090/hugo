@@ -22,15 +22,6 @@
     </item>
     
     <item>
-      <title>My First Post</title>
-      <link>https://stevenlee090.github.io/hugo/posts/anotherpost/</link>
-      <pubDate>Sun, 07 Jul 2019 19:00:33 +1000</pubDate>
-      
-      <guid>https://stevenlee090.github.io/hugo/posts/anotherpost/</guid>
-      <description>This is another post!</description>
-    </item>
-    
-    <item>
       <title>Taiwan</title>
       <link>https://stevenlee090.github.io/hugo/posts/taiwan/</link>
       <pubDate>Sat, 22 Jun 2019 20:55:10 +1000</pubDate>
@@ -38,6 +29,19 @@
       <guid>https://stevenlee090.github.io/hugo/posts/taiwan/</guid>
       <description>Here, I will attempt to outline some of the interesting places to visit in Taiwan, in particular within the capital city Taipei. Plus some other regions of interest, which are still quite accessible via the high speed rail system.
 Places to visit around Sanchong District Considering there are so many places to visit around the Sanchong District, I will briefly go over my personal favourites. Clicking on the links in each dot point should open them up in Google Maps.</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://stevenlee090.github.io/hugo/posts/my-first-post/</link>
+      <pubDate>Sat, 22 Jun 2019 19:00:33 +1000</pubDate>
+      
+      <guid>https://stevenlee090.github.io/hugo/posts/my-first-post/</guid>
+      <description>This is my very first post using Hugo!
+Emoji Support This is enable by going into the the config.toml file and adding the following line.
+enableEmoji = true  I ❤️ Hugo!
+LaTeX Equation through MathJax The official Hugo documentation goes over how you can setup MathJax with Hugo.
+However, this particular blog post from a fellow Hugo user is arguably clearer and easier to follow if you want to setup MathJax support for your own Hugo site.</description>
     </item>
     
   </channel>
