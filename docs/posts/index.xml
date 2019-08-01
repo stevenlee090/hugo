@@ -6,10 +6,29 @@
     <description>Recent content in Posts on Hugo Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jun 2019 20:55:10 +1000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 14:15:54 +1000</lastBuildDate>
     
 	<atom:link href="https://stevenlee090.github.io/hugo/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CIE Week 1 Reflection</title>
+      <link>https://stevenlee090.github.io/hugo/posts/cie-reflection-1/</link>
+      <pubDate>Thu, 01 Aug 2019 14:15:54 +1000</pubDate>
+      
+      <guid>https://stevenlee090.github.io/hugo/posts/cie-reflection-1/</guid>
+      <description>In this week’s reflection for Creating Innovative Engineering, I will be focusing on the three main components:
+ The guest talk and our environment Projects with AI TED Talk and where innovation comes in  The Guest Talk Even though it is only week one, Creating Innovative Engineering has introduced a large amount of new information to the students. Personally, I was really impressed by the guest speaker, Allison MacFarlane, who introduced herself, talked about her experience and answered numerous questions.</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://stevenlee090.github.io/hugo/posts/anotherpost/</link>
+      <pubDate>Sun, 07 Jul 2019 19:00:33 +1000</pubDate>
+      
+      <guid>https://stevenlee090.github.io/hugo/posts/anotherpost/</guid>
+      <description>This is another post!</description>
+    </item>
     
     <item>
       <title>Taiwan</title>
@@ -19,19 +38,6 @@
       <guid>https://stevenlee090.github.io/hugo/posts/taiwan/</guid>
       <description>Here, I will attempt to outline some of the interesting places to visit in Taiwan, in particular within the capital city Taipei. Plus some other regions of interest, which are still quite accessible via the high speed rail system.
 Places to visit around Sanchong District Considering there are so many places to visit around the Sanchong District, I will briefly go over my personal favourites. Clicking on the links in each dot point should open them up in Google Maps.</description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>https://stevenlee090.github.io/hugo/posts/my-first-post/</link>
-      <pubDate>Sat, 22 Jun 2019 19:00:33 +1000</pubDate>
-      
-      <guid>https://stevenlee090.github.io/hugo/posts/my-first-post/</guid>
-      <description>This is my very first post using Hugo!
-Emoji Support This is enable by going into the the config.toml file and adding the following line.
-enableEmoji = true  I ❤️ Hugo!
-LaTeX Equation through MathJax The official Hugo documentation goes over how you can setup MathJax with Hugo.
-However, this particular blog post from a fellow Hugo user is arguably clearer and easier to follow if you want to setup MathJax support for your own Hugo site.</description>
     </item>
     
   </channel>
