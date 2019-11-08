@@ -3,20 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://stevenlee090.github.io/hugo/posts/cie-reflection-1/</loc>
-    <lastmod>2019-08-01T14:15:54+10:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://stevenlee090.github.io/hugo/</loc>
-    <lastmod>2019-08-01T14:15:54+10:00</lastmod>
+    <lastmod>2019-11-08T16:07:56+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stevenlee090.github.io/hugo/posts/</loc>
-    <lastmod>2019-08-01T14:15:54+10:00</lastmod>
+    <lastmod>2019-11-08T16:07:56+11:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://stevenlee090.github.io/hugo/posts/cpp-ref-vs-pointer/</loc>
+    <lastmod>2019-11-08T16:07:56+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stevenlee090.github.io/hugo/posts/cie-reflection-1/</loc>
+    <lastmod>2019-08-01T14:15:54+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://stevenlee090.github.io/hugo/posts/anotherpost/</loc>
+    <lastmod>2019-07-07T19:00:33+10:00</lastmod>
   </url>
   
   <url>

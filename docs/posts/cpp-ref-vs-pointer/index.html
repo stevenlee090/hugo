@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>References and Pointers in C&#43;&#43; - Hugo Ideas</title>
+    
+    <meta name="description" content="Here I will try to go over the differences between reference and pointers in C&#43;&#43;. When I first encountered these concepts, I was not sure about the the difference between reference and pointer, and found them quite confusing. As I am going over the C&#43;&#43; Primer book , I thought it would be a good idea to make some notes on these concepts.
+Compound Types Specifically, reference and pointer were discussed in section 2.">
+    <meta name="author" content="">
+    
+    <link href="https://stevenlee090.github.io/hugo/css/github-gist.min.css" rel="stylesheet">
+    <link href="https://stevenlee090.github.io/hugo/css/style.css" rel="stylesheet">
+    
+    <link rel="apple-touch-icon" href="https://stevenlee090.github.io/hugo/img/apple-touch-icon.png">
+    <link rel="icon" href="https://stevenlee090.github.io/hugo/img/favicon.ico">
+    
+    <meta name="generator" content="Hugo 0.55.6" />
+    
+    <link rel="alternate" type="application/atom+xml" href="https://stevenlee090.github.io/hugo/index.xml" title="Hugo Ideas">
+    
+    
+    
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+  </head>
+  <body class="single">
+    <header class="header">
+      <div class="wrap">
+        
+        <p class="logo"><a href="https://stevenlee090.github.io/hugo">Hugo Ideas</a></p>
+        
+        
+      </div>
+    </header>
+    
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">References and Pointers in C&#43;&#43;</h1>
+    <div class="post-meta">2019.11.8</div>
+  </header>
+  <div class="post-content">
+
+<p>Here I will try to go over the differences between reference and pointers in C++. When I first encountered these concepts, I was not sure about the the difference between <code>reference</code> and <code>pointer</code>, and found them quite confusing. As I am going over the <a href="https://www.goodreads.com/book/show/768080.C_Primer">C++ Primer book </a>, I thought it would be a good idea to make some notes on these concepts.</p>
+
+<h2 id="compound-types">Compound Types</h2>
+
+<p>Specifically, reference and pointer were discussed in section 2.3 compound types.</p>
+
+<blockquote>
+<p>Compound type is a type that is defined in terms of another type.</p>
+</blockquote>
+
+<h3 id="reference">Reference</h3>
+
+<ul>
+<li>A reference defines an alternative name for an object.</li>
+<li>A reference type &ldquo;refers to&rdquo; another type.</li>
+<li>We can define a reference type by writing a declarator of the form <code>&amp;d</code>.</li>
+
+<li><p>Essentially, a reference is an alias.</p>
+
+<pre><code>int value = 1024;
+int &amp;refVal = value; // refVal refers value
+</code></pre></li>
+</ul>
+
+<p>Some properties to keep in mind:
+* A reference must be initialised, so we cannot simply write <code>int &amp;refVal2;</code>.
+* We bind the reference to its initialiser. Once initialised, reference remains bound, and cannot rebind to a reference.</p>
+
+<h3 id="pointer">Pointer</h3>
+
+<p>A pointer is a compound type that &ldquo;points to&rdquo; another type. Like references, pointers are used for indirect access to other objects.</p>
+
+<ul>
+<li>Unlike a reference, a pointer is an object in its own right. Pointers can be assigned and copied.</li>
+<li>Unlike a reference, a pointer need not be initialised at the time it is defined.</li>
+</ul>
+
+<p>We define a pointer type by writing a declarator of the form <code>*d</code>.</p>
+
+<pre><code>int *ip1, *ip2; // both ip1 and ip2 are pointers to int
+</code></pre>
+
+<p>A pointer holds the address of another object. We can get the address of an object by using address-of operator <code>&amp;</code>.</p>
+
+<pre><code>int value = 42;
+int *p = &amp;value; // p holds address of value; p is a pointer to value
+</code></pre>
+
+<p>When assigning pointer variables, the data types must match, as the type of pointer is used to infer type of object.</p>
+
+<p>The value (i.e., the address) stored in a pointer can be in one of four states:
+1. It can point to an object.
+2. It can point to the location just immediately past the end of an object.
+3. It can be a null pointer, indicating that it is not bound to any object.
+4. It can be invalid; values other than the preceding three are invalid.</p>
+
+<p>It is an error to copy or otherwise try to access the value of an invalid pointer. Such an error is one that compiler is unlikely to detect.</p>
+
+<h4 id="using-a-pointer-to-access-an-object">Using a pointer to access an object</h4>
+
+<p>We can use the dereference operator <code>*</code> to access an object which a points to.</p>
+
+<pre><code>int value = 42;
+int *p = &amp;value;
+std::cout &lt;&lt; *p &lt;&lt; std::endl;
+</code></pre>
+
+<h4 id="null-pointers">Null Pointers</h4>
+
+<p>A null pointer does not point to any object. We can obtain a null pointer by:</p>
+
+<pre><code>int *p1 = nullptr;      // equivalent to int *p1 = 0;
+</code></pre>
+
+<blockquote>
+<p>Modern C++ programs generally should avoid using <code>NULL</code> and use <code>nullptr</code> instead.</p>
+</blockquote>
+
+<p>We should always initialise all the pointers.</p>
+
+<ul>
+<li>Define pointer only after the object to which it should point has been defined.</li>
+<li>Initialise pointer to <code>nullptr</code> or <code>0</code> if we are not binding any object.</li>
+</ul>
+
+<h4 id="comparing-two-pointers">Comparing two pointers</h4>
+
+<blockquote>
+<p>Note that it is possible for a pointer to an object and a pointer one past the end of a different object to hold the same address.</p>
+</blockquote>
+
+<p>See this <a href="https://stackoverflow.com/questions/21850108/what-is-pointer-past-the-end-of-an-object-means">stackoverflow post</a> for more details, but essentially what this means is that, if we have:</p>
+
+<pre><code>int a[] = {1, 2};
+float b;
+</code></pre>
+
+<p>It is possible to have the following expression to be true.</p>
+
+<pre><code>(void *) &amp;a[2] == (void *) &amp;b;
+</code></pre>
+
+<h3 id="combining-the-two-concepts">Combining the two concepts</h3>
+
+<p>For example, we can have:</p>
+
+<pre><code>int j = 42, *p2 = &amp;j;   // j is an int, p2 is an int pointer to j
+int *&amp;pref = p2;        // pref is a reference to the pointer p2
+</code></pre>
+
+<h3 id="differences">Differences</h3>
+
+<p>The most important difference between pointer and reference is that, reference is not an object, whereas pointer is an object on its own.</p>
+
+<ul>
+<li>To re-iterate, once a reference has been initialised, it cannot be bound to another object.</li>
+<li>On the other hand, a pointer can point to different objects, can can be left uninitialised. However, this is generally not recommended in practice.</li>
+</ul>
+</div>
+  <footer class="post-footer">
+    
+  </footer>
+  
+  
+  
+  
+</article>
+
+</main>
+<footer class="footer">
+  <span>&copy; 2019 <a href="https://stevenlee090.github.io/hugo">Hugo Ideas</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Theme️ <a href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">Paper</a></span>
+</footer>
+<script src="https://stevenlee090.github.io/hugo/js/instantclick.min.js" data-no-instant></script>
+<script data-no-instant>InstantClick.init();</script>
+<script src="https://stevenlee090.github.io/hugo/js/highlight.min.js" data-no-instant></script>
+<script data-no-instant>
+  let body;
+  function menuToggleListener() {
+    body.classList.toggle('blur');
+  }
+  function setMenuToggleListener() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (!menuToggle) return;
+    body = document.querySelector('body');
+    menuToggle.addEventListener('click', menuToggleListener);
+  }
+
+  hljs.initHighlightingOnLoad();
+  setMenuToggleListener();
+
+  InstantClick.on('change', function () {
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block);
+    });
+    setMenuToggleListener();
+  });
+</script>
+</body>
+</html>
+
