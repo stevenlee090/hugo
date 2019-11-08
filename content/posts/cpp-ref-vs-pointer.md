@@ -1,7 +1,7 @@
 ---
 title: "References and Pointers in C++"
 date: 2019-11-08T16:07:56+11:00
-draft: true
+draft: false
 ---
 
 Here I will try to go over the differences between reference and pointers in C++. When I first encountered these concepts, I was not sure about the the difference between `reference` and `pointer`, and found them quite confusing. As I am going over the [C++ Primer book ](https://www.goodreads.com/book/show/768080.C_Primer), I thought it would be a good idea to make some notes on these concepts.
