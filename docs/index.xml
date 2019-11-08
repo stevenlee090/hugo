@@ -32,15 +32,6 @@ Compound Types Specifically, reference and pointer were discussed in section 2.<
     </item>
     
     <item>
-      <title>My First Post</title>
-      <link>https://stevenlee090.github.io/hugo/posts/anotherpost/</link>
-      <pubDate>Sun, 07 Jul 2019 19:00:33 +1000</pubDate>
-      
-      <guid>https://stevenlee090.github.io/hugo/posts/anotherpost/</guid>
-      <description>This is another post!</description>
-    </item>
-    
-    <item>
       <title>Taiwan</title>
       <link>https://stevenlee090.github.io/hugo/posts/taiwan/</link>
       <pubDate>Sat, 22 Jun 2019 20:55:10 +1000</pubDate>
