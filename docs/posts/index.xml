@@ -17,7 +17,7 @@
       <pubDate>Fri, 08 Nov 2019 16:07:56 +1100</pubDate>
       
       <guid>https://stevenlee090.github.io/hugo/posts/cpp-ref-vs-pointer/</guid>
-      <description>Here I will try to go over the differences between reference and pointers in C++. When I first encountered these concepts, I was not sure about the the difference between reference and pointer, and found them quite confusing. As I am going over the C++ Primer book , I thought it would be a good idea to make some notes on these concepts.
+      <description>Here I will try to go over the differences between reference and pointers in C++. When I first encountered these concepts, I was not sure about the the difference between reference and pointer, and found them quite confusing. As I am going over the C++ Primer book, I thought it would be a good idea to make some notes on these concepts.
 Compound Types Specifically, reference and pointer were discussed in section 2.</description>
     </item>
     

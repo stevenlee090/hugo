@@ -7,7 +7,7 @@
     
     <title>References and Pointers in C&#43;&#43; - Hugo Ideas</title>
     
-    <meta name="description" content="Here I will try to go over the differences between reference and pointers in C&#43;&#43;. When I first encountered these concepts, I was not sure about the the difference between reference and pointer, and found them quite confusing. As I am going over the C&#43;&#43; Primer book , I thought it would be a good idea to make some notes on these concepts.
+    <meta name="description" content="Here I will try to go over the differences between reference and pointers in C&#43;&#43;. When I first encountered these concepts, I was not sure about the the difference between reference and pointer, and found them quite confusing. As I am going over the C&#43;&#43; Primer book, I thought it would be a good idea to make some notes on these concepts.
 Compound Types Specifically, reference and pointer were discussed in section 2.">
     <meta name="author" content="">
     
@@ -73,7 +73,7 @@ Compound Types Specifically, reference and pointer were discussed in section 2."
   </header>
   <div class="post-content">
 
-<p>Here I will try to go over the differences between reference and pointers in C++. When I first encountered these concepts, I was not sure about the the difference between <code>reference</code> and <code>pointer</code>, and found them quite confusing. As I am going over the <a href="https://www.goodreads.com/book/show/768080.C_Primer">C++ Primer book </a>, I thought it would be a good idea to make some notes on these concepts.</p>
+<p>Here I will try to go over the differences between reference and pointers in C++. When I first encountered these concepts, I was not sure about the the difference between <code>reference</code> and <code>pointer</code>, and found them quite confusing. As I am going over the <a href="https://www.goodreads.com/book/show/768080.C_Primer">C++ Primer book</a>, I thought it would be a good idea to make some notes on these concepts.</p>
 
 <h2 id="compound-types">Compound Types</h2>
 
@@ -97,9 +97,12 @@ int &amp;refVal = value; // refVal refers value
 </code></pre></li>
 </ul>
 
-<p>Some properties to keep in mind:
-* A reference must be initialised, so we cannot simply write <code>int &amp;refVal2;</code>.
-* We bind the reference to its initialiser. Once initialised, reference remains bound, and cannot rebind to a reference.</p>
+<p>Some properties to keep in mind:</p>
+
+<ul>
+<li>A reference must be initialised, so we cannot simply write <code>int &amp;refVal2;</code>.</li>
+<li>We bind the reference to its initialiser. Once initialised, reference remains bound, and cannot rebind to a reference.</li>
+</ul>
 
 <h3 id="pointer">Pointer</h3>
 
@@ -123,11 +126,14 @@ int *p = &amp;value; // p holds address of value; p is a pointer to value
 
 <p>When assigning pointer variables, the data types must match, as the type of pointer is used to infer type of object.</p>
 
-<p>The value (i.e., the address) stored in a pointer can be in one of four states:
-1. It can point to an object.
-2. It can point to the location just immediately past the end of an object.
-3. It can be a null pointer, indicating that it is not bound to any object.
-4. It can be invalid; values other than the preceding three are invalid.</p>
+<p>The value (i.e., the address) stored in a pointer can be in one of four states:</p>
+
+<ol>
+<li>It can point to an object.</li>
+<li>It can point to the location just immediately past the end of an object.</li>
+<li>It can be a null pointer, indicating that it is not bound to any object.</li>
+<li>It can be invalid; values other than the preceding three are invalid.</li>
+</ol>
 
 <p>It is an error to copy or otherwise try to access the value of an invalid pointer. Such an error is one that compiler is unlikely to detect.</p>
 

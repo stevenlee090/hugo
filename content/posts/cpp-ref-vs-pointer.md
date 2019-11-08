@@ -4,7 +4,7 @@ date: 2019-11-08T16:07:56+11:00
 draft: false
 ---
 
-Here I will try to go over the differences between reference and pointers in C++. When I first encountered these concepts, I was not sure about the the difference between `reference` and `pointer`, and found them quite confusing. As I am going over the [C++ Primer book ](https://www.goodreads.com/book/show/768080.C_Primer), I thought it would be a good idea to make some notes on these concepts.
+Here I will try to go over the differences between reference and pointers in C++. When I first encountered these concepts, I was not sure about the the difference between `reference` and `pointer`, and found them quite confusing. As I am going over the [C++ Primer book](https://www.goodreads.com/book/show/768080.C_Primer), I thought it would be a good idea to make some notes on these concepts.
 
 ## Compound Types
 Specifically, reference and pointer were discussed in section 2.3 compound types.
@@ -24,6 +24,7 @@ int &refVal = value; // refVal refers value
 ```
 
 Some properties to keep in mind:
+
 * A reference must be initialised, so we cannot simply write `int &refVal2;`.
 * We bind the reference to its initialiser. Once initialised, reference remains bound, and cannot rebind to a reference.
 
@@ -47,6 +48,7 @@ int *p = &value; // p holds address of value; p is a pointer to value
 When assigning pointer variables, the data types must match, as the type of pointer is used to infer type of object.
 
 The value (i.e., the address) stored in a pointer can be in one of four states:
+
 1. It can point to an object.
 2. It can point to the location just immediately past the end of an object.
 3. It can be a null pointer, indicating that it is not bound to any object.
